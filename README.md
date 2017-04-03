@@ -26,8 +26,8 @@ C/C++ 의 기존 데이터 Reader/Writer 구조체 및 클래스보다 사용하
 기존에는 데이터를 쓸 때 Java나 C# 의 데이터 스트림 클래스와 같이 버퍼를 동적으로 할당하지 못했기 때문에 그 부분을 해결하고자 Wrapper 클래스를 따로 추가하였습니다.
 이건 새로 만들어도 좋지만 cocos2d-x 내부의 Wrapper 클래스를 그대로 가져와 수정하였습니다.
 
-<pre><code>
-//데이터 쓰기
+<pre><code
+>//데이터 쓰기
 BinaryDataWriter saveData(SAVE_FILE_NAME);
 
 saveData.writeString(m_UserName);
@@ -37,6 +37,7 @@ saveData.writeInt(m_SaveVersion);
 saveData.writeInt(m_UserCoin);
 
 saveData.close();
+
 </code></pre>
 
 <pre><code>
@@ -56,4 +57,5 @@ m_SaveVersion = loadData.readInt();
 m_UserCoin = loadData.readInt();
 
 loadData.clear();
+
 </code></pre>
